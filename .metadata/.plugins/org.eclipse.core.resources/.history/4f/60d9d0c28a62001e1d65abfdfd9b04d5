@@ -1,0 +1,5 @@
+package com.blog.blogging.repositories;
+
+public class CommentRepo {
+
+}

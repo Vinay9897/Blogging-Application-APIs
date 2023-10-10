@@ -1,0 +1,5 @@
+package com.blog.blogging.entity;
+
+public class Comment {
+
+}

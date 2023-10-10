@@ -1,0 +1,9 @@
+package com.blog.blogging.services;
+
+import com.blog.blogging.payloads.CommentDto;
+import com.blog.blogging.payloads.PostDto;
+
+public interface CommentService {
+
+	CommentDto createComment(CommentDto commentDto, PostDto postDto);
+}

@@ -1,0 +1,87 @@
+package com.blog.blogging.payloads;
+
+import java.util.Date;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.blog.blogging.entity.Category;
+import com.blog.blogging.entity.User;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+@Getter
+@Setter
+@NoArgsConstructor
+public class PostDto {
+	private int postId;
+	private String title;
+
+	private String content;
+
+	private String image;
+
+	private Date date;
+
+	private UserDto user;
+
+	private CategoryDto category;
+	
+//	public String getTitle() {
+//		return title;
+//	}
+//
+//	public void setTitle(String title) {
+//		this.title = title;
+//	}
+//
+//	public String getContent() {
+//		return content;
+//	}
+//
+//	public void setContent(String content) {
+//		this.content = content;
+//	}
+//
+//	public String getImage() {
+//		return image;
+//	}
+//
+//	public void setImage(String image) {
+//		this.image = image;
+//	}
+//
+//	public Date getDate() {
+//		return date;
+//	}
+//
+//	public void setDate(Date date) {
+//		this.date = date;
+//	}
+//
+//	public UserDto getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(UserDto user) {
+//		this.user = user;
+//	}
+//
+//	public CategoryDto getCategory() {
+//		return category;
+//	}
+//
+//	public void setCategory(CategoryDto category) {
+//		this.category = category;
+//	}
+//
+//	public int getPostId() {
+//		return postId;
+//	}
+//
+//	public void setPostId(int postId) {
+//		this.postId = postId;
+//	}
+
+}

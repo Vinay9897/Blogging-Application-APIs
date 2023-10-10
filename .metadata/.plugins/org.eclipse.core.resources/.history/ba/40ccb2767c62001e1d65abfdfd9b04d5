@@ -1,0 +1,14 @@
+package com.blog.blogging.entity;
+
+import javax.persistence.Id;
+
+public class Comment {
+
+	@Id
+	private Long id;
+	
+	private String content;
+	
+	private Post post;
+	
+}

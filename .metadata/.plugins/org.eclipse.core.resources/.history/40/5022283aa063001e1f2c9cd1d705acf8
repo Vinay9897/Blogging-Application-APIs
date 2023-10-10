@@ -1,0 +1,46 @@
+package com.blog.blogging;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+//import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import com.blog.blogging.config.AppContstants;
+import com.blog.blogging.entity.Role;
+import com.blog.blogging.repositories.RoleRepo;
+
+@SpringBootApplication
+public class BloggingApplication implements CommandLineRunner{
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	public static void main(String[] args) {
+		SpringApplication.run(BloggingApplication.class, args);
+		System.out.println("Hello1");
+	}
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
+	}
+	@Override
+	public void run(String... args) throws Exception {
+		System.out.println(this.passwordEncoder.encode("xyz"));
+		
+		Role role1 = new Role();
+		role1.setId(AppContstants.ADMIN_USER);
+		role1.setName("ROLE_ADMIN");
+		
+		Role role2 = new Role();
+		role2.setId(AppContstants.NORMAL_USER);
+		role2.setName("ROLE_NORMAL");
+		
+	}
+
+	
+	
+}

@@ -1,0 +1,21 @@
+package com.blog.blogging.entity;
+
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Comment {
+
+	@Id
+	private Long id;
+	
+	private String content;
+	
+	@ManyToOne
+	private Post post;
+	
+}

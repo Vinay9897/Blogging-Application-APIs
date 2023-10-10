@@ -1,0 +1,39 @@
+package com.blog.blogging.payloads;
+
+import javax.persistence.Column;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+public class CategoryDto {
+//	public int getCategoryId() {
+//		return categoryId;
+//	}
+//	public void setCategoryId(int categoryId) {
+//		this.categoryId = categoryId;
+//	}
+//	public String getCategoryTitle() {
+//		return categoryTitle;
+//	}
+//	public void setCategoryTitle(String categoryTitle) {
+//		this.categoryTitle = categoryTitle;
+//	}
+//	public String getCategoryDescription() {
+//		return categoryDescription;
+//	}
+//	public void setCategoryDescription(String categoryDescription) {
+//		this.categoryDescription = categoryDescription;
+//	}
+	
+	private int categoryId;
+	@NotEmpty(message=" Title should not be blank")
+	private String categoryTitle;
+	@NotEmpty
+	@Size(min=5,message="Min size of Description must be 5")
+	private String categoryDescription;
+}
